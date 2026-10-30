@@ -9,6 +9,6 @@ class StudentTest {
     @Test
     void studentKeepsName() {
         Student student = new Student("Yeker Aishe-berra", "aishe.berra@example.com");
-        assertEquals("Yeker Aishe-berra", student.getFullName());
+        assertEquals("WRONG NAME", student.getFullName());
     }
 }
