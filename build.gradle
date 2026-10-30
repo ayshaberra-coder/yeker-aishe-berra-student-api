@@ -7,11 +7,6 @@ plugins {
 group = 'com.yeker'
 version = '0.0.1-SNAPSHOT'
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
-    }
-}
 
 repositories {
     mavenCentral()
@@ -32,4 +27,8 @@ tasks.named('test') {
 
 bootJar {
     archiveFileName = 'app.jar'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 17
 }
